@@ -2,20 +2,7 @@ plugins {
     id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
 }
-apply plugin: 'maven-publish'
 
-def getVersionName = { ->
-    return "0.0.3"
-}
-
-def getArtifactId = { ->
-    return "dummy"
-}
-
-task sourceJar(type: Jar) {
-    from android.sourceSets.main.java.srcDirs
-    classifier "sources"
-}
 /*
 
 publishing {
