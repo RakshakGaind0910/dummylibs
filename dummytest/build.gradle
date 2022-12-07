@@ -16,6 +16,7 @@ task sourceJar(type: Jar) {
     from android.sourceSets.main.java.srcDirs
     classifier "sources"
 }
+/*
 
 publishing {
     publications {
@@ -23,9 +24,7 @@ publishing {
             groupId 'com.dummylibs'
             artifactId getArtifactId()
             version getVersionName()
-            artifact("$buildDir/outputs/aar/${getArtifactId()}-release.aar") {
-                builtBy assemble
-            }
+            artifact("$buildDir/outputs/aar/${getArtifactId()}-release.aar")
             artifact(sourceJar)
             pom.withXml {
                 final dependenciesNode = asNode().appendNode('dependencies')
@@ -60,6 +59,7 @@ publishing {
         }
     }
 }
+*/
 
 
 android {
